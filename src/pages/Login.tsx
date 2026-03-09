@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Login = () => {
   return (
-    <div className="bg-[#f7f6f8] dark:bg-[#19141e] text-slate-900 dark:text-slate-100 font-sans min-h-screen flex flex-col pt-16">
+    <div className="bg-[#f7f6f8] text-slate-900 font-sans min-h-screen flex flex-col pt-16">
       {/* Main Content: Two Column Layout */}
       <main className="grow flex flex-col md:flex-row h-full">
         {/* Left Column: Illustration */}
@@ -27,17 +27,17 @@ export const Login = () => {
         </div>
 
         {/* Right Column: Login Form */}
-        <div className="flex-1 bg-white dark:bg-[#19141e] flex flex-col items-center justify-center p-6 sm:p-12 lg:p-24">
+        <div className="flex-1 bg-white flex flex-col items-center justify-center p-6 sm:p-12 lg:p-24">
           <div className="w-full max-w-md">
             <div className="mb-10">
-              <h2 className="text-4xl font-black text-slate-900 dark:text-white mb-2 tracking-tight">Get Started</h2>
-              <p className="text-slate-500 dark:text-slate-400">Enter your email or username to login to your account.</p>
+              <h2 className="text-4xl font-black text-slate-900 mb-2 tracking-tight">Get Started</h2>
+              <p className="text-slate-500">Enter your email or username to login to your account.</p>
             </div>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div>
-                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2" htmlFor="identifier">Email or Username</label>
+                <label className="block text-sm font-semibold text-slate-700 mb-2" htmlFor="identifier">Email or Username</label>
                 <input 
-                  className="w-full h-14 px-4 rounded-lg border border-slate-200 dark:border-slate-800 bg-[#f7f6f8] dark:bg-slate-900 focus:ring-2 focus:ring-[#5b2c90]/20 focus:border-[#5b2c90] outline-none transition-all form-shadow placeholder:text-slate-400" 
+                  className="w-full h-14 px-4 rounded-lg border border-slate-200 bg-[#f7f6f8] focus:ring-2 focus:ring-[#5b2c90]/20 focus:border-[#5b2c90] outline-none transition-all form-shadow placeholder:text-slate-400" 
                   id="identifier" 
                   name="identifier" 
                   placeholder="e.g. alex@example.com" 
@@ -46,18 +46,18 @@ export const Login = () => {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300" htmlFor="password">Password</label>
+                  <label className="block text-sm font-semibold text-slate-700" htmlFor="password">Password</label>
                   <a className="text-sm font-bold text-[#5b2c90] hover:underline" href="#">Forgot Password?</a>
                 </div>
                 <div className="relative group">
                   <input 
-                    className="w-full h-14 px-4 rounded-lg border border-slate-200 dark:border-slate-800 bg-[#f7f6f8] dark:bg-slate-900 focus:ring-2 focus:ring-[#5b2c90]/20 focus:border-[#5b2c90] outline-none transition-all form-shadow placeholder:text-slate-400" 
+                    className="w-full h-14 px-4 rounded-lg border border-slate-200 bg-[#f7f6f8] focus:ring-2 focus:ring-[#5b2c90]/20 focus:border-[#5b2c90] outline-none transition-all form-shadow placeholder:text-slate-400" 
                     id="password" 
                     name="password" 
                     placeholder="Enter your password" 
                     type="password"
                   />
-                  <button className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" type="button">
+                  <button className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors" type="button">
                     <span className="material-symbols-outlined">visibility</span>
                   </button>
                 </div>
@@ -67,36 +67,36 @@ export const Login = () => {
               </button>
             </form>
             <div className="mt-8 text-center">
-              <p className="text-slate-500 dark:text-slate-400 text-sm">
+              <p className="text-slate-500 text-sm">
                 Don't have an account? <a className="text-[#5b2c90] font-bold hover:underline" href="#">Create an account</a>
               </p>
             </div>
 
             {/* Trust Badges Section */}
-            <div className="mt-16 grid grid-cols-2 gap-6 pt-10 border-t border-slate-100 dark:border-slate-800">
+            <div className="mt-16 grid grid-cols-2 gap-6 pt-10 border-t border-slate-100">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#5b2c90]/10 flex items-center justify-center text-[#5b2c90]">
                   <span className="material-symbols-outlined text-[20px]">verified</span>
                 </div>
-                <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Curated Investing</span>
+                <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">Curated Investing</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#5b2c90]/10 flex items-center justify-center text-[#5b2c90]">
                   <span className="material-symbols-outlined text-[20px]">devices</span>
                 </div>
-                <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Completely Digitalised</span>
+                <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">Completely Digitalised</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#5b2c90]/10 flex items-center justify-center text-[#5b2c90]">
                   <span className="material-symbols-outlined text-[20px]">security</span>
                 </div>
-                <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Bank Grade Security</span>
+                <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">Bank Grade Security</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#5b2c90]/10 flex items-center justify-center text-[#5b2c90]">
                   <span className="material-symbols-outlined text-[20px]">contact_support</span>
                 </div>
-                <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Help Center</span>
+                <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">Help Center</span>
               </div>
             </div>
           </div>
