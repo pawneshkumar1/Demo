@@ -28,87 +28,76 @@ export const Offerings = () => {
   ];
 
   return (
-    <section className="py-32 bg-bg-light relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-      
+    <section className="py-24 bg-bg-light">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-primary font-extrabold uppercase tracking-[0.3em] text-[10px] mb-4"
-            >
-              Our Collections
-            </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl lg:text-6xl font-extrabold font-display text-ink mb-6 tracking-tighter"
+              className="text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4"
             >
-              Exquisite <span className="text-gradient">Offerings</span>
+              Batuk's Offerings
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-slate-muted leading-relaxed"
+              className="text-lg text-slate-600"
             >
-              Discover a world of secure investments and timeless beauty, crafted for those who demand the best.
+              Explore our curated selection of gold and silver investment products designed for maximum security.
             </motion.p>
           </div>
           <motion.button
             whileHover={{ x: 5 }}
-            className="text-ink font-extrabold text-sm uppercase tracking-widest flex items-center gap-3 group"
+            className="text-primary font-700 flex items-center gap-2 hover:underline"
           >
-            Explore All <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-ink group-hover:text-white transition-all"><ArrowRight size={18} /></div>
+            View All Products <ArrowRight size={18} />
           </motion.button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative"
+              transition={{ delay: index * 0.2 }}
+              whileHover={{ y: -15 }}
+              className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
             >
-              <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 group-hover:shadow-primary/20">
+              <div className="h-64 overflow-hidden relative">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
-                
-                <div className="absolute top-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-[10px] font-extrabold text-white uppercase tracking-[0.2em]">
+                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-800 text-primary uppercase tracking-widest">
                   {product.tag}
                 </div>
-
-                <div className="absolute bottom-0 left-0 w-full p-10">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-white/10 backdrop-blur-md text-white rounded-2xl flex items-center justify-center border border-white/20">
-                      {product.icon}
-                    </div>
-                    <h3 className="text-3xl font-extrabold font-display text-white tracking-tight">{product.title}</h3>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/5 text-primary rounded-xl flex items-center justify-center">
+                    {product.icon}
                   </div>
-                  <p className="text-white/70 mb-8 leading-relaxed font-medium">
-                    {product.description}
-                  </p>
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-5 rounded-2xl bg-white text-ink font-extrabold text-xs uppercase tracking-widest shadow-xl transition-all duration-300"
-                  >
-                    Get Started
-                  </motion.button>
+                  <h3 className="text-2xl font-800 font-display text-slate-900">{product.title}</h3>
                 </div>
+                <p className="text-slate-500 mb-8 leading-relaxed">
+                  {product.description}
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full py-3 md:py-4 rounded-2xl bg-primary text-white font-700 text-sm md:text-base shadow-md shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 relative overflow-hidden group"
+                >
+                  <span className="relative z-10">Register Now</span>
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />
+                </motion.button>
               </div>
             </motion.div>
           ))}

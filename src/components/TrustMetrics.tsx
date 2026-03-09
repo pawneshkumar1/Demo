@@ -54,35 +54,29 @@ export const TrustMetrics = () => {
   ];
 
   return (
-    <section className="py-32 bg-white relative">
+    <section className="py-20 bg-white">
       <div className="container-custom">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.8 }}
-              className="relative group"
+              transition={{ delay: index * 0.2 }}
+              whileHover={{ y: -10 }}
+              className="p-8 rounded-[2rem] bg-bg-light border border-slate-100 group transition-all duration-300"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-bg-light rounded-[2rem] flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
-                  {React.cloneElement(metric.icon as React.ReactElement<{ className?: string }>, { 
-                    className: "transition-colors duration-500 group-hover:text-white" 
-                  })}
-                </div>
-                <h3 className="text-5xl font-extrabold font-display text-ink mb-3 tracking-tighter">
-                  {index === 0 && '₹'}
-                  <CountUp end={metric.value} />
-                  {metric.suffix}
-                </h3>
-                <p className="text-xs font-extrabold text-primary uppercase tracking-[0.2em] mb-4">{metric.label}</p>
-                <p className="text-base text-slate-muted leading-relaxed max-w-[250px] font-medium">{metric.description}</p>
+              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
+                {metric.icon}
               </div>
-              {index < metrics.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-6 w-px h-24 bg-slate-100 -translate-y-1/2" />
-              )}
+              <h3 className="text-4xl font-800 font-display text-slate-900 mb-2">
+                {index === 0 && '₹'}
+                <CountUp end={metric.value} />
+                {metric.suffix}
+              </h3>
+              <p className="text-lg font-700 text-primary mb-2">{metric.label}</p>
+              <p className="text-sm text-slate-500 leading-relaxed">{metric.description}</p>
             </motion.div>
           ))}
         </div>

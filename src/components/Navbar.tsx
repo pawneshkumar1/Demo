@@ -25,32 +25,29 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-[1200px]',
-        isScrolled ? 'top-4' : 'top-6'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
+        isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-md py-3' : 'bg-transparent'
       )}
     >
-      <div className={cn(
-        "container-custom flex items-center justify-between py-3 transition-all duration-500 rounded-2xl border border-white/20",
-        isScrolled ? "bg-white/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]" : "bg-white/40 backdrop-blur-md"
-      )}>
+      <div className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform duration-500 group-hover:rotate-12">
+        <Link to="/" className="flex items-center gap-2">
+          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
             <div className="w-5 h-5 border-2 border-white rounded-sm rotate-45" />
           </div>
-          <span className="text-2xl font-extrabold font-display tracking-tighter text-ink">Batuk</span>
+          <span className="text-2xl font-800 font-display tracking-tight text-primary">Batuk</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
-              className="relative text-[13px] uppercase tracking-widest font-bold text-ink/60 hover:text-primary transition-colors group"
+              className="relative text-sm font-600 text-slate-600 hover:text-primary transition-colors group"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </div>
@@ -61,10 +58,10 @@ export const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-ink text-white px-7 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg shadow-ink/10 hover:shadow-ink/20 transition-all relative overflow-hidden group"
+              className="bg-primary text-white px-6 py-2.5 rounded-xl font-700 text-sm shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all relative overflow-hidden group"
             >
               <span className="relative z-10">Get Started</span>
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />
             </motion.button>
           </Link>
         </div>
@@ -92,7 +89,7 @@ export const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-lg font-semibold text-slate-900 py-2 border-b border-slate-50"
+                  className="text-lg font-600 text-slate-900 py-2 border-b border-slate-50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -102,7 +99,7 @@ export const Navbar = () => {
                 <motion.button 
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-primary text-white w-full py-4 rounded-xl font-bold mt-2 relative overflow-hidden group"
+                  className="bg-primary text-white w-full py-4 rounded-xl font-700 mt-2 relative overflow-hidden group"
                 >
                   <span className="relative z-10">Get Started</span>
                   <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />

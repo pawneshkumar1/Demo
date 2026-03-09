@@ -5,13 +5,10 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Sora", sans-serif;
   
-  --color-primary: #4A1D7A;
-  --color-primary-soft: #7C4DFF;
-  --color-gold: #C5A059;
-  --color-gold-light: #E6D5B8;
-  --color-bg-light: #FBFBFD;
-  --color-ink: #1D1D1F;
-  --color-slate-muted: #86868B;
+  --color-primary: #5B2C8F;
+  --color-primary-soft: #8C6ED6;
+  --color-gold: #D4AF37;
+  --color-bg-light: #F5F3FA;
 
   --animate-shimmer: shimmer 2s linear infinite;
 
@@ -23,28 +20,16 @@
 
 @layer base {
   body {
-    @apply bg-bg-light text-ink font-sans antialiased selection:bg-primary/10 selection:text-primary;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    @apply bg-bg-light text-slate-900 font-sans antialiased;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
   }
   
   .container-custom {
-    @apply max-w-[1200px] mx-auto px-6 lg:px-12;
-  }
-
-  .premium-button {
-    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold transition-all duration-500 hover:scale-[1.02] active:scale-[0.98];
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-ink via-primary to-primary-soft;
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
   }
 }

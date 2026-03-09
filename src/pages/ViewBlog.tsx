@@ -54,7 +54,7 @@ export const ViewBlog = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-extrabold font-display text-slate-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-800 font-display text-slate-900 mb-6 leading-tight">
               Why Digital Gold is the Best Inflation Hedge
             </h1>
             
@@ -102,11 +102,11 @@ export const ViewBlog = () => {
 
           {/* Article Content Body */}
           <div className="prose prose-slate max-w-none prose-headings:text-slate-900 prose-p:leading-relaxed prose-li:leading-relaxed">
-            <p className="text-xl leading-relaxed text-slate-700 first-letter:text-5xl first-letter:font-extrabold first-letter:text-primary first-letter:mr-3 first-letter:float-left" id="intro">
+            <p className="text-xl leading-relaxed text-slate-700 first-letter:text-5xl first-letter:font-800 first-letter:text-primary first-letter:mr-3 first-letter:float-left" id="intro">
               As global economies face unprecedented volatility, investors are increasingly looking for ways to preserve their purchasing power. Traditionally, gold has been the sanctuary of choice. However, in the 21st century, "Digital Gold" has emerged not just as an alternative, but as a superior evolution of this ancient asset class.
             </p>
             
-            <h2 className="text-3xl font-extrabold mt-12 mb-6 text-slate-900" id="why-gold">Understanding the Inflation Monster</h2>
+            <h2 className="text-3xl font-800 mt-12 mb-6 text-slate-900" id="why-gold">Understanding the Inflation Monster</h2>
             <p className="text-slate-700 mb-6">
               Inflation isn't just about rising prices; it's about the erosion of value. When the supply of fiat currency grows faster than the value of goods and services, your hard-earned savings lose their "firepower."
             </p>
@@ -124,7 +124,7 @@ export const ViewBlog = () => {
               </figure>
             </div>
             
-            <h3 className="text-2xl font-extrabold mt-8 mb-4 text-slate-900">Why Gold Still Shines</h3>
+            <h3 className="text-2xl font-800 mt-8 mb-4 text-slate-900">Why Gold Still Shines</h3>
             <p className="text-slate-700 mb-4">Unlike paper money, gold has an intrinsic scarcity. It cannot be printed on a whim. This finite supply is the cornerstone of its role as a store of value. Here are the three main reasons gold remains relevant:</p>
             
             <ul className="list-disc pl-6 space-y-3 my-6 text-slate-700">
@@ -133,18 +133,18 @@ export const ViewBlog = () => {
               <li><strong>No Counterparty Risk:</strong> Physical gold doesn't depend on a government's promise to pay.</li>
             </ul>
             
-            <h2 className="text-3xl font-extrabold mt-12 mb-6 text-slate-900" id="digital-vs-physical">The Evolution to Digital Gold</h2>
+            <h2 className="text-3xl font-800 mt-12 mb-6 text-slate-900" id="digital-vs-physical">The Evolution to Digital Gold</h2>
             <p className="text-slate-700 mb-6">Physical gold, while valuable, comes with significant "carrying costs." Storage, insurance, and the physical security required to protect gold bars are often prohibitive for the average retail investor.</p>
             
             <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-xl">
               <p className="font-medium text-primary italic mb-0">"Digital gold provides the security of institutional vaults with the accessibility of a mobile app. It is gold reimagined for the smartphone generation."</p>
             </div>
             
-            <h3 className="text-2xl font-extrabold mt-8 mb-4 text-slate-900" id="liquidity">Instant Liquidity: The Modern Edge</h3>
+            <h3 className="text-2xl font-800 mt-8 mb-4 text-slate-900" id="liquidity">Instant Liquidity: The Modern Edge</h3>
             <p className="text-slate-700 mb-6">Try selling a 1kg gold bar on a Saturday afternoon. It's nearly impossible. With Batuk's Digital Gold, you can buy or sell fractions of gold (as low as $1) instantly, 24/7. This granular accessibility makes it a practical tool for daily wealth management, not just long-term hoarding.</p>
             
             <section className="bg-primary/10 border border-primary/20 rounded-2xl p-8 my-12" id="takeaways">
-              <h3 className="text-xl font-extrabold text-primary flex items-center gap-2 mb-4">
+              <h3 className="text-xl font-800 text-primary flex items-center gap-2 mb-4">
                 <Key size={20} /> Key Takeaways
               </h3>
               <ol className="space-y-4 text-slate-700">
