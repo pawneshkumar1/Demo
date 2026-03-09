@@ -7,21 +7,21 @@ export const Offerings = () => {
     {
       title: 'Digital Gold',
       tag: 'Secure',
-      image: 'https://images.unsplash.com/photo-1718752773274-4baba3906300?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&q=80&w=600',
       description: 'Buy 24K 99.9% pure gold at live market rates starting from ₹1.',
       icon: <ShieldCheck size={20} />
     },
     {
       title: 'Gold & Silver SIP',
       tag: 'Popular',
-      image: 'https://images.unsplash.com/photo-1624365169873-d42588f4e866?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1589750670744-dc9633e0f124?auto=format&fit=crop&q=80&w=600',
       description: 'Automate your wealth creation with daily, weekly, or monthly SIPs.',
       icon: <TrendingUp size={20} />
     },
     {
       title: 'Jewellery',
       tag: 'Premium',
-      image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=600',
       description: 'Exquisite physical collections with guaranteed buy-back and purity.',
       icon: <Gem size={20} />
     }
@@ -36,7 +36,7 @@ export const Offerings = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4"
+              className="text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4"
             >
               Batuk's Offerings
             </motion.h2>

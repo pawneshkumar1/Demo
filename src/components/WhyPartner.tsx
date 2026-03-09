@@ -48,7 +48,7 @@ export const WhyPartner = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-800 font-display mb-6"
+            className="text-4xl lg:text-5xl font-800 font-display mb-6"
           >
             Why Partner with Us?
           </motion.h2>
@@ -57,7 +57,7 @@ export const WhyPartner = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-base sm:text-lg text-primary-soft max-w-2xl mx-auto"
+            className="text-lg text-primary-soft max-w-2xl mx-auto"
           >
             Join India's fastest-growing fintech ecosystem and provide your clients with the best investment tools.
           </motion.p>
