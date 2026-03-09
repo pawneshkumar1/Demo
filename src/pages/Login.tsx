@@ -1,8 +1,15 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Mail, Lock } from 'lucide-react';
+import { ArrowRight, Mail, Lock, AlertCircle } from 'lucide-react';
+import { useError } from '../context/ErrorContext';
 
 export const Login = () => {
+  const { showError } = useError();
+
+  const handleTestError = () => {
+    showError('This is a test error message to demonstrate the centralized error handling system.', 'error');
+  };
+
   return (
     <main className="min-h-screen pt-24 pb-12 flex items-center justify-center bg-bg-light relative overflow-hidden">
       {/* Background Elements */}
@@ -76,8 +83,15 @@ export const Login = () => {
             </motion.button>
           </form>
 
-          <div className="mt-8 text-center">
-            <p className="text-sm text-slate-500">
+          <div className="mt-8 pt-6 border-t border-slate-50 text-center">
+            <button 
+              onClick={handleTestError}
+              className="text-xs font-700 text-slate-400 hover:text-red-500 flex items-center justify-center gap-2 mx-auto transition-colors"
+            >
+              <AlertCircle size={14} />
+              Test Error Toast
+            </button>
+            <p className="text-sm text-slate-500 mt-6">
               Don't have an account?{' '}
               <a href="#" className="font-700 text-primary hover:underline">Sign up</a>
             </p>

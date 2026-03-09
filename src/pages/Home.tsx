@@ -15,6 +15,7 @@ export const Home = () => {
       <Offerings />
       <WhyPartner />
       <Partners />
+      <Blog />
       <DownloadBanner />
     </main>
   );

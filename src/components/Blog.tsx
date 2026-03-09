@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BlogCard } from './BlogCard';
@@ -35,28 +36,39 @@ export const Blog = () => {
   ];
 
   return (
-    <section className="py-24 bg-bg-light">
+    <section className="py-32 bg-white relative overflow-hidden">
       <div className="container-custom">
-        <div className="mb-12 text-left max-w-2xl">
-          <h2 className="text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4 leading-tight tracking-tight">
-            Insights &amp; <span className="text-primary">Market Trends</span>
-          </h2>
-          <p className="text-slate-600 text-lg font-normal leading-relaxed border-l-4 border-gold pl-4">
-            Stay updated with the latest in digital gold and silver investments. Expert analysis for the modern investor.
-          </p>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-primary font-800 uppercase tracking-[0.3em] text-[10px] mb-4"
+            >
+              Market Insights
+            </motion.div>
+            <h2 className="text-5xl lg:text-6xl font-800 font-display text-ink mb-6 tracking-tighter">
+              Latest <span className="text-gradient">Perspectives</span>
+            </h2>
+            <p className="text-xl text-slate-muted leading-relaxed font-500">
+              Expert analysis and market updates to help you navigate the world of digital assets.
+            </p>
+          </div>
+          <Link to="/blog">
+            <motion.button
+              whileHover={{ x: 5 }}
+              className="text-ink font-800 text-sm uppercase tracking-widest flex items-center gap-3 group"
+            >
+              Read More <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-ink group-hover:text-white transition-all"><ArrowRight size={18} /></div>
+            </motion.button>
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {blogPosts.map((post, index) => (
             <BlogCard key={index} {...post} />
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <Link to="/blog" className="inline-flex items-center gap-2 bg-primary/10 text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-bold transition-all duration-300 border border-primary/20 group">
-            View All Articles
-            <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
       </div>
     </section>

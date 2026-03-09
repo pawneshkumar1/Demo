@@ -4,88 +4,93 @@ import { Apple, PlayCircle, ShieldCheck } from 'lucide-react';
 
 export const DownloadBanner = () => {
   return (
-    <section className="py-24">
+    <section className="py-32">
       <div className="container-custom">
-        <div className="relative bg-gradient-to-br from-primary to-primary-soft rounded-[3rem] overflow-hidden shadow-2xl shadow-primary/30">
+        <div className="relative bg-ink rounded-[4rem] overflow-hidden shadow-[0_48px_96px_-16px_rgba(0,0,0,0.3)]">
           {/* Decorative Background */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.3),transparent)]" />
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(124,77,255,0.15),transparent_70%)]" />
+            <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,rgba(197,160,89,0.1),transparent_50%)]" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center p-12 lg:p-24 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center p-16 lg:p-32 relative z-10">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 1 }}
             >
-              <h2 className="text-4xl lg:text-6xl font-800 font-display text-white mb-6 leading-tight">
-                Download the <br /> Batuk App
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="text-gold font-800 uppercase tracking-[0.3em] text-[10px] mb-8"
+              >
+                Mobile Experience
+              </motion.div>
+              <h2 className="text-5xl lg:text-7xl font-800 font-display text-white mb-8 leading-[0.95] tracking-tighter">
+                Invest <br /> <span className="text-primary-soft">Anywhere.</span>
               </h2>
-              <p className="text-lg text-white/80 mb-10 leading-relaxed max-w-md">
-                Invest in gold and silver on the go. Secure, simple, and always at your fingertips. Join 100,000+ investors today.
+              <p className="text-xl text-white/50 mb-12 leading-relaxed max-w-md font-500">
+                The most sophisticated digital gold platform, now in the palm of your hand. Secure, elegant, and powerful.
               </p>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-6">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 md:px-8 md:py-4 rounded-2xl flex items-center gap-3 hover:bg-white/20 transition-all relative overflow-hidden group shadow-lg"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 text-white px-8 py-4 rounded-2xl flex items-center gap-4 hover:bg-white/10 transition-all shadow-xl"
                 >
-                  <div className="relative z-10 flex items-center gap-3">
-                    <PlayCircle size={28} />
-                    <div className="text-left">
-                      <p className="text-[10px] font-700 uppercase opacity-70">Get it on</p>
-                      <p className="text-base md:text-lg font-800">Google Play</p>
-                    </div>
+                  <PlayCircle size={32} className="text-primary-soft" />
+                  <div className="text-left">
+                    <p className="text-[10px] font-800 uppercase tracking-widest opacity-50">Get it on</p>
+                    <p className="text-lg font-800 tracking-tight">Google Play</p>
                   </div>
-                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />
                 </motion.button>
 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 md:px-8 md:py-4 rounded-2xl flex items-center gap-3 hover:bg-white/20 transition-all relative overflow-hidden group shadow-lg"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 text-white px-8 py-4 rounded-2xl flex items-center gap-4 hover:bg-white/10 transition-all shadow-xl"
                 >
-                  <div className="relative z-10 flex items-center gap-3">
-                    <Apple size={28} />
-                    <div className="text-left">
-                      <p className="text-[10px] font-700 uppercase opacity-70">Download on the</p>
-                      <p className="text-base md:text-lg font-800">App Store</p>
-                    </div>
+                  <Apple size={32} className="text-primary-soft" />
+                  <div className="text-left">
+                    <p className="text-[10px] font-800 uppercase tracking-widest opacity-50">Download on the</p>
+                    <p className="text-lg font-800 tracking-tight">App Store</p>
                   </div>
-                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />
                 </motion.button>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="relative flex justify-center lg:justify-end"
             >
-              <div className="relative w-64 h-[500px] bg-slate-900 rounded-[3rem] border-[10px] border-slate-800 shadow-2xl overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl z-20" />
+              <div className="relative w-72 h-[580px] bg-black rounded-[3.5rem] border-[12px] border-white/5 shadow-2xl overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-7 bg-white/5 rounded-b-3xl z-20" />
                 <img
-                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600"
+                  src="https://images.unsplash.com/photo-1556656793-062ff9878258?auto=format&fit=crop&q=80&w=600"
                   alt="App UI"
-                  className="w-full h-full object-cover opacity-80"
+                  className="w-full h-full object-cover opacity-60"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
               </div>
               
               {/* Floating Element */}
               <motion.div
                 animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-20 -left-10 glass-card p-4 rounded-2xl shadow-xl hidden md:block"
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-24 -left-12 glass-card px-6 py-4 rounded-2xl shadow-2xl hidden md:block border-white/10"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center">
-                    <ShieldCheck size={16} />
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center border border-emerald-500/20">
+                    <ShieldCheck size={20} />
                   </div>
-                  <p className="text-sm font-800 text-slate-900">Verified Secure</p>
+                  <p className="text-xs font-800 text-ink uppercase tracking-widest">Bank Grade Security</p>
                 </div>
               </motion.div>
             </motion.div>
