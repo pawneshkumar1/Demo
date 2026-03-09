@@ -18,10 +18,10 @@ export const DownloadBanner = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl lg:text-6xl font-800 font-display text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-800 font-display text-white mb-6 leading-tight">
                 Download the <br /> Batuk App
               </h2>
-              <p className="text-lg text-white/80 mb-10 leading-relaxed max-w-md">
+              <p className="text-base sm:text-lg text-white/80 mb-10 leading-relaxed max-w-md">
                 Invest in gold and silver on the go. Secure, simple, and always at your fingertips. Join 100,000+ investors today.
               </p>
               

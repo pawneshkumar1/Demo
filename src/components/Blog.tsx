@@ -38,7 +38,7 @@ export const Blog = () => {
     <section className="py-24 bg-bg-light">
       <div className="container-custom">
         <div className="mb-12 text-left max-w-2xl">
-          <h2 className="text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4 leading-tight tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4 leading-tight tracking-tight">
             Insights &amp; <span className="text-primary">Market Trends</span>
           </h2>
           <p className="text-slate-600 text-lg font-normal leading-relaxed border-l-4 border-gold pl-4">

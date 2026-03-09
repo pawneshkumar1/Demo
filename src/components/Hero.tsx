@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import goldHeroImg from '../assets/gold_investment_hero.avif';
 
 export const Hero = () => {
   return (
@@ -43,11 +44,11 @@ export const Hero = () => {
               <span className="text-xs font-700 uppercase tracking-wider text-slate-600">India's Premium Gold Platform</span>
             </motion.div>
             
-            <h1 className="text-5xl lg:text-7xl font-800 font-display leading-[1.1] text-slate-900 mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-800 font-display leading-[1.1] text-slate-900 mb-6">
               Boost your earnings with <span className="text-primary">Batuk</span>
             </h1>
             
-            <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
+            <p className="text-base sm:text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
               Experience unparalleled support, smart tools, and step-by-step assistance to grow your wealth through digital gold investments.
             </p>
             
@@ -99,10 +100,9 @@ export const Hero = () => {
           >
             <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/10 border-8 border-white">
               <img
-                src="https://images.unsplash.com/photo-1642115958395-3f05ad94030c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={goldHeroImg}
                 alt="Gold Investment"
                 className="w-full h-auto"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
             </div>

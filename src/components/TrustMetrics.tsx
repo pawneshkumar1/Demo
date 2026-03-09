@@ -55,6 +55,8 @@ export const TrustMetrics = () => {
 
   return (
     <section className="py-20 bg-white">
+      {/* Visually hidden h2 for SEO heading hierarchy */}
+      <h2 className="sr-only">Our Trust Metrics</h2>
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (
@@ -70,11 +72,11 @@ export const TrustMetrics = () => {
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
                 {metric.icon}
               </div>
-              <h3 className="text-4xl font-800 font-display text-slate-900 mb-2">
+              <p className="text-4xl font-800 font-display text-slate-900 mb-2">
                 {index === 0 && '₹'}
                 <CountUp end={metric.value} />
                 {metric.suffix}
-              </h3>
+              </p>
               <p className="text-lg font-700 text-primary mb-2">{metric.label}</p>
               <p className="text-sm text-slate-500 leading-relaxed">{metric.description}</p>
             </motion.div>
