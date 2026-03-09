@@ -6,11 +6,14 @@ import { Home } from './pages/Home';
 import { BlogPage } from './pages/BlogPage';
 import { ViewBlog } from './pages/ViewBlog';
 import { Login } from './pages/Login';
+import { Registration } from './pages/Registration';
+import { IndividualPartnerRegistration } from './pages/IndividualPartnerRegistration';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 const AppContent = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === '/login';
+  const isRegistrationPage = location.pathname.startsWith('/register');
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -33,6 +36,8 @@ const AppContent = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/view" element={<ViewBlog />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registration />} />
+        <Route path="/register/individual" element={<IndividualPartnerRegistration />} />
       </Routes>
 
       <Footer />

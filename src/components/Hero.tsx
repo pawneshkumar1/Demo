@@ -63,13 +63,15 @@ export const Hero = () => {
                 </motion.button>
               </Link>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-transparent text-primary border-2 border-primary/20 px-5 py-2.5 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-700 text-xs md:text-lg hover:bg-primary/5 transition-all"
-              >
-                Become a Partner
-              </motion.button>
+              <Link to="/register">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-transparent text-primary border-2 border-primary/20 px-5 py-2.5 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-700 text-xs md:text-lg hover:bg-primary/5 transition-all"
+                >
+                  Become a Partner
+                </motion.button>
+              </Link>
             </div>
 
             <div className="mt-12 flex items-center gap-4">
