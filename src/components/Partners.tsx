@@ -24,7 +24,7 @@ export const Partners = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[10px] font-800 uppercase tracking-[0.4em] text-slate-muted"
+          className="text-[10px] font-extrabold uppercase tracking-[0.4em] text-slate-muted"
         >
           Institutional Grade Partnerships
         </motion.div>

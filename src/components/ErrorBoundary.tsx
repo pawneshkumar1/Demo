@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { AlertCircle, RefreshCw, Home } from 'lucide-react';
-import { motion } from 'motion/react';
+import React, { ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 interface State {
@@ -12,74 +11,78 @@ interface State {
 }
 
 export class ErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-    };
-  }
+  public state: State = {
+    hasError: false,
+    error: null,
+  };
 
-  static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
   }
 
-  handleReset = () => {
-    this.setState({ hasError: false, error: null });
-    window.location.reload();
-  };
-
-  handleGoHome = () => {
+  private handleReset = () => {
     this.setState({ hasError: false, error: null });
     window.location.href = '/';
   };
 
-  render() {
+  private handleReload = () => {
+    window.location.reload();
+  };
+
+  public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-bg-light flex items-center justify-center p-6">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="max-w-md w-full bg-white rounded-3xl p-10 shadow-2xl shadow-primary/5 border border-slate-100 text-center"
-          >
-            <div className="w-20 h-20 bg-red-50 rounded-2xl flex items-center justify-center text-red-500 mx-auto mb-8">
-              <AlertCircle size={40} />
+        <div className="min-h-screen bg-neutral-50 flex items-center justify-center p-4 font-sans">
+          <div className="max-w-md w-full bg-white rounded-2xl shadow-sm border border-neutral-200 p-8 text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-500" />
             </div>
-            <h1 className="text-3xl font-800 font-display text-ink mb-4 tracking-tight">Something went wrong</h1>
-            <p className="text-slate-muted mb-10 font-500 leading-relaxed">
-              An unexpected error occurred. We've been notified and are looking into it.
-            </p>
             
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-8 p-4 bg-slate-50 rounded-xl text-left overflow-auto max-h-40">
-                <code className="text-xs text-red-600 font-mono break-all">
+            <h1 className="text-2xl font-semibold text-neutral-900 mb-2">
+              Something went wrong
+            </h1>
+            
+            <p className="text-neutral-600 mb-8 text-sm leading-relaxed">
+              We encountered an unexpected error. Don't worry, your data is safe. 
+              Try refreshing the page or returning home.
+            </p>
+
+            {this.state.error && (
+              <div className="mb-8 p-4 bg-neutral-50 rounded-lg border border-neutral-100 text-left overflow-auto max-h-32">
+                <code className="text-xs font-mono text-red-600 break-all">
                   {this.state.error.toString()}
                 </code>
               </div>
             )}
 
-            <div className="flex flex-col gap-3">
+            <div className="grid grid-cols-2 gap-4">
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-900 text-white rounded-xl font-medium hover:bg-neutral-800 transition-colors"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Reload
+              </button>
+              
               <button
                 onClick={this.handleReset}
-                className="w-full py-4 bg-primary text-white rounded-2xl font-800 text-sm uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-primary-dark transition-all shadow-lg shadow-primary/20"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-neutral-900 border border-neutral-200 rounded-xl font-medium hover:bg-neutral-50 transition-colors"
               >
-                <RefreshCw size={18} />
-                Try Again
-              </button>
-              <button
-                onClick={this.handleGoHome}
-                className="w-full py-4 bg-white text-ink border border-slate-200 rounded-2xl font-800 text-sm uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-slate-50 transition-all"
-              >
-                <Home size={18} />
-                Go to Homepage
+                <Home className="w-4 h-4" />
+                Home
               </button>
             </div>
-          </motion.div>
+            
+            <div className="mt-8 pt-6 border-t border-neutral-100">
+              <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">
+                Error Reference: {Math.random().toString(36).substring(7).toUpperCase()}
+              </p>
+            </div>
+          </div>
         </div>
       );
     }

@@ -38,7 +38,7 @@ export const Offerings = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-primary font-800 uppercase tracking-[0.3em] text-[10px] mb-4"
+              className="text-primary font-extrabold uppercase tracking-[0.3em] text-[10px] mb-4"
             >
               Our Collections
             </motion.div>
@@ -46,7 +46,7 @@ export const Offerings = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl lg:text-6xl font-800 font-display text-ink mb-6 tracking-tighter"
+              className="text-5xl lg:text-6xl font-extrabold font-display text-ink mb-6 tracking-tighter"
             >
               Exquisite <span className="text-gradient">Offerings</span>
             </motion.h2>
@@ -62,7 +62,7 @@ export const Offerings = () => {
           </div>
           <motion.button
             whileHover={{ x: 5 }}
-            className="text-ink font-800 text-sm uppercase tracking-widest flex items-center gap-3 group"
+            className="text-ink font-extrabold text-sm uppercase tracking-widest flex items-center gap-3 group"
           >
             Explore All <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-ink group-hover:text-white transition-all"><ArrowRight size={18} /></div>
           </motion.button>
@@ -87,7 +87,7 @@ export const Offerings = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
                 
-                <div className="absolute top-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-[10px] font-800 text-white uppercase tracking-[0.2em]">
+                <div className="absolute top-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-[10px] font-extrabold text-white uppercase tracking-[0.2em]">
                   {product.tag}
                 </div>
 
@@ -96,15 +96,15 @@ export const Offerings = () => {
                     <div className="w-12 h-12 bg-white/10 backdrop-blur-md text-white rounded-2xl flex items-center justify-center border border-white/20">
                       {product.icon}
                     </div>
-                    <h3 className="text-3xl font-800 font-display text-white tracking-tight">{product.title}</h3>
+                    <h3 className="text-3xl font-extrabold font-display text-white tracking-tight">{product.title}</h3>
                   </div>
-                  <p className="text-white/70 mb-8 leading-relaxed font-500">
+                  <p className="text-white/70 mb-8 leading-relaxed font-medium">
                     {product.description}
                   </p>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-5 rounded-2xl bg-white text-ink font-800 text-xs uppercase tracking-widest shadow-xl transition-all duration-300"
+                    className="w-full py-5 rounded-2xl bg-white text-ink font-extrabold text-xs uppercase tracking-widest shadow-xl transition-all duration-300"
                   >
                     Get Started
                   </motion.button>

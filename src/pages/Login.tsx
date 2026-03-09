@@ -35,13 +35,13 @@ export const Login = () => {
             <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 mx-auto mb-4">
               <div className="w-6 h-6 border-2 border-white rounded-sm rotate-45" />
             </div>
-            <h1 className="text-2xl font-800 font-display text-slate-900">Welcome Back</h1>
+            <h1 className="text-2xl font-extrabold font-display text-slate-900">Welcome Back</h1>
             <p className="text-slate-500 mt-2 text-sm">Log in to your Batuk account</p>
           </div>
 
           <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
             <div>
-              <label className="block text-sm font-600 text-slate-700 mb-2">Email Address</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
                   <Mail size={18} />
@@ -56,8 +56,8 @@ export const Login = () => {
 
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="block text-sm font-600 text-slate-700">Password</label>
-                <a href="#" className="text-xs font-600 text-primary hover:underline">Forgot password?</a>
+                <label className="block text-sm font-semibold text-slate-700">Password</label>
+                <a href="#" className="text-xs font-semibold text-primary hover:underline">Forgot password?</a>
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
@@ -74,7 +74,7 @@ export const Login = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-primary text-white py-3.5 rounded-xl font-700 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all relative overflow-hidden group mt-6"
+              className="w-full bg-primary text-white py-3.5 rounded-xl font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all relative overflow-hidden group mt-6"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Log In <ArrowRight size={18} />
@@ -86,14 +86,14 @@ export const Login = () => {
           <div className="mt-8 pt-6 border-t border-slate-50 text-center">
             <button 
               onClick={handleTestError}
-              className="text-xs font-700 text-slate-400 hover:text-red-500 flex items-center justify-center gap-2 mx-auto transition-colors"
+              className="text-xs font-bold text-slate-400 hover:text-red-500 flex items-center justify-center gap-2 mx-auto transition-colors"
             >
               <AlertCircle size={14} />
               Test Error Toast
             </button>
             <p className="text-sm text-slate-500 mt-6">
               Don't have an account?{' '}
-              <a href="#" className="font-700 text-primary hover:underline">Sign up</a>
+              <a href="#" className="font-bold text-primary hover:underline">Sign up</a>
             </p>
           </div>
         </motion.div>

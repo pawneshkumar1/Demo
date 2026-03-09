@@ -24,14 +24,14 @@ export const DownloadBanner = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="text-gold font-800 uppercase tracking-[0.3em] text-[10px] mb-8"
+                className="text-gold font-extrabold uppercase tracking-[0.3em] text-[10px] mb-8"
               >
                 Mobile Experience
               </motion.div>
-              <h2 className="text-5xl lg:text-7xl font-800 font-display text-white mb-8 leading-[0.95] tracking-tighter">
+              <h2 className="text-5xl lg:text-7xl font-extrabold font-display text-white mb-8 leading-[0.95] tracking-tighter">
                 Invest <br /> <span className="text-primary-soft">Anywhere.</span>
               </h2>
-              <p className="text-xl text-white/50 mb-12 leading-relaxed max-w-md font-500">
+              <p className="text-xl text-white/50 mb-12 leading-relaxed max-w-md font-medium">
                 The most sophisticated digital gold platform, now in the palm of your hand. Secure, elegant, and powerful.
               </p>
               
@@ -43,8 +43,8 @@ export const DownloadBanner = () => {
                 >
                   <PlayCircle size={32} className="text-primary-soft" />
                   <div className="text-left">
-                    <p className="text-[10px] font-800 uppercase tracking-widest opacity-50">Get it on</p>
-                    <p className="text-lg font-800 tracking-tight">Google Play</p>
+                    <p className="text-[10px] font-extrabold uppercase tracking-widest opacity-50">Get it on</p>
+                    <p className="text-lg font-extrabold tracking-tight">Google Play</p>
                   </div>
                 </motion.button>
 
@@ -55,8 +55,8 @@ export const DownloadBanner = () => {
                 >
                   <Apple size={32} className="text-primary-soft" />
                   <div className="text-left">
-                    <p className="text-[10px] font-800 uppercase tracking-widest opacity-50">Download on the</p>
-                    <p className="text-lg font-800 tracking-tight">App Store</p>
+                    <p className="text-[10px] font-extrabold uppercase tracking-widest opacity-50">Download on the</p>
+                    <p className="text-lg font-extrabold tracking-tight">App Store</p>
                   </div>
                 </motion.button>
               </div>
@@ -90,7 +90,7 @@ export const DownloadBanner = () => {
                   <div className="w-10 h-10 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center border border-emerald-500/20">
                     <ShieldCheck size={20} />
                   </div>
-                  <p className="text-xs font-800 text-ink uppercase tracking-widest">Bank Grade Security</p>
+                  <p className="text-xs font-extrabold text-ink uppercase tracking-widest">Bank Grade Security</p>
                 </div>
               </motion.div>
             </motion.div>

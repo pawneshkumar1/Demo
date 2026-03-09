@@ -38,7 +38,7 @@ export const Navbar = () => {
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 transition-transform duration-500 group-hover:rotate-12">
             <div className="w-5 h-5 border-2 border-white rounded-sm rotate-45" />
           </div>
-          <span className="text-2xl font-800 font-display tracking-tighter text-ink">Batuk</span>
+          <span className="text-2xl font-extrabold font-display tracking-tighter text-ink">Batuk</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -47,7 +47,7 @@ export const Navbar = () => {
             <Link
               key={link.name}
               to={link.href}
-              className="relative text-[13px] uppercase tracking-widest font-700 text-ink/60 hover:text-primary transition-colors group"
+              className="relative text-[13px] uppercase tracking-widest font-bold text-ink/60 hover:text-primary transition-colors group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -61,7 +61,7 @@ export const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-ink text-white px-7 py-2.5 rounded-full font-700 text-xs uppercase tracking-widest shadow-lg shadow-ink/10 hover:shadow-ink/20 transition-all relative overflow-hidden group"
+              className="bg-ink text-white px-7 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg shadow-ink/10 hover:shadow-ink/20 transition-all relative overflow-hidden group"
             >
               <span className="relative z-10">Get Started</span>
               <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
@@ -92,7 +92,7 @@ export const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-lg font-600 text-slate-900 py-2 border-b border-slate-50"
+                  className="text-lg font-semibold text-slate-900 py-2 border-b border-slate-50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -102,7 +102,7 @@ export const Navbar = () => {
                 <motion.button 
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-primary text-white w-full py-4 rounded-xl font-700 mt-2 relative overflow-hidden group"
+                  className="bg-primary text-white w-full py-4 rounded-xl font-bold mt-2 relative overflow-hidden group"
                 >
                   <span className="relative z-10">Get Started</span>
                   <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />

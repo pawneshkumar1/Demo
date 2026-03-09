@@ -75,7 +75,7 @@ const Toast: React.FC<{ error: ErrorMessage; onClear: () => void }> = ({ error, 
   return (
     <div className={`flex items-center gap-4 p-4 rounded-2xl border shadow-xl backdrop-blur-md min-w-[320px] max-w-md ${bgColors[error.type]}`}>
       <div className="shrink-0">{icons[error.type]}</div>
-      <div className="flex-1 text-sm font-600 text-ink leading-tight">
+      <div className="flex-1 text-sm font-semibold text-ink leading-tight">
         {error.message}
       </div>
       <button

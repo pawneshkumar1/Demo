@@ -18,8 +18,8 @@ export default function App() {
   });
 
   return (
-    <Router>
-      <ErrorBoundary>
+    <ErrorBoundary>
+      <Router>
         <div className="relative">
           {/* Progress Bar */}
           <motion.div
@@ -38,7 +38,7 @@ export default function App() {
 
           <Footer />
         </div>
-      </ErrorBoundary>
-    </Router>
+      </Router>
+    </ErrorBoundary>
   );
 }

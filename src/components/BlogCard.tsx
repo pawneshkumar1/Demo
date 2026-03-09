@@ -49,7 +49,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute top-6 left-6">
-          <span className="bg-white/90 backdrop-blur-md text-ink text-[10px] uppercase tracking-[0.2em] font-800 px-4 py-2 rounded-full shadow-sm">
+          <span className="bg-white/90 backdrop-blur-md text-ink text-[10px] uppercase tracking-[0.2em] font-extrabold px-4 py-2 rounded-full shadow-sm">
             {category}
           </span>
         </div>
@@ -62,7 +62,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
         </button>
       </div>
       <div className="p-10 flex flex-col flex-1">
-        <div className="flex items-center gap-4 text-slate-muted text-[10px] uppercase tracking-widest font-700 mb-6">
+        <div className="flex items-center gap-4 text-slate-muted text-[10px] uppercase tracking-widest font-bold mb-6">
           <div className="flex items-center gap-2">
             <Calendar size={12} className="text-primary" />
             <span>{date}</span>
@@ -73,14 +73,14 @@ export const BlogCard: React.FC<BlogCardProps> = ({
             <span>{author}</span>
           </div>
         </div>
-        <Link to={link} className="text-ink text-2xl font-800 leading-tight mb-4 hover:text-primary transition-colors cursor-pointer block tracking-tight">
+        <Link to={link} className="text-ink text-2xl font-extrabold leading-tight mb-4 hover:text-primary transition-colors cursor-pointer block tracking-tight">
           {title}
         </Link>
-        <p className="text-slate-muted text-base leading-relaxed mb-8 line-clamp-2 font-500">
+        <p className="text-slate-muted text-base leading-relaxed mb-8 line-clamp-2 font-medium">
           {description}
         </p>
         <div className="mt-auto pt-8 border-t border-slate-50 flex justify-between items-center">
-          <Link to={link} className="group/link flex items-center gap-3 text-ink font-800 text-xs uppercase tracking-widest">
+          <Link to={link} className="group/link flex items-center gap-3 text-ink font-extrabold text-xs uppercase tracking-widest">
             Explore Article
             <div className="w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center group-hover/link:bg-primary group-hover/link:text-white group-hover/link:border-primary transition-all duration-300">
               <ArrowRight size={14} className="transition-transform group-hover/link:translate-x-0.5" />

@@ -48,7 +48,7 @@ export const WhyPartner = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-gold font-800 uppercase tracking-[0.3em] text-[10px] mb-6"
+            className="text-gold font-extrabold uppercase tracking-[0.3em] text-[10px] mb-6"
           >
             Partnership Benefits
           </motion.div>
@@ -56,7 +56,7 @@ export const WhyPartner = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl lg:text-6xl font-800 font-display mb-8 tracking-tighter"
+            className="text-5xl lg:text-6xl font-extrabold font-display mb-8 tracking-tighter"
           >
             Elevate Your <span className="text-primary-soft">Business</span>
           </motion.h2>
@@ -65,7 +65,7 @@ export const WhyPartner = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-white/60 max-w-2xl mx-auto font-500 leading-relaxed"
+            className="text-xl text-white/60 max-w-2xl mx-auto font-medium leading-relaxed"
           >
             Join India's most sophisticated fintech ecosystem and provide your clients with world-class investment tools.
           </motion.p>
@@ -84,8 +84,8 @@ export const WhyPartner = () => {
               <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
                 {feature.icon}
               </div>
-              <h3 className="text-2xl font-800 font-display mb-4 tracking-tight">{feature.title}</h3>
-              <p className="text-white/50 leading-relaxed font-500">
+              <h3 className="text-2xl font-extrabold font-display mb-4 tracking-tight">{feature.title}</h3>
+              <p className="text-white/50 leading-relaxed font-medium">
                 {feature.description}
               </p>
             </motion.div>

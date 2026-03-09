@@ -37,15 +37,15 @@ export const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-gold opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
               </span>
-              <span className="text-[10px] font-800 uppercase tracking-[0.2em] text-ink/60">Premium Digital Gold Platform</span>
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-ink/60">Premium Digital Gold Platform</span>
             </motion.div>
             
-            <h1 className="text-6xl lg:text-[5.5rem] font-800 leading-[0.95] text-ink mb-8 tracking-tighter">
+            <h1 className="text-6xl lg:text-[5.5rem] font-extrabold leading-[0.95] text-ink mb-8 tracking-tighter">
               Wealth <br />
               <span className="text-gradient">Reimagined.</span>
             </h1>
             
-            <p className="text-xl text-slate-muted mb-12 leading-relaxed max-w-lg font-500">
+            <p className="text-xl text-slate-muted mb-12 leading-relaxed max-w-lg font-medium">
               Experience the future of digital gold. Secure, transparent, and built for the next generation of investors.
             </p>
             
@@ -54,7 +54,7 @@ export const Hero = () => {
                 <motion.button
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-primary text-white px-10 py-5 rounded-full font-700 text-sm uppercase tracking-widest shadow-2xl shadow-primary/30 transition-all relative overflow-hidden group"
+                  className="bg-primary text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-2xl shadow-primary/30 transition-all relative overflow-hidden group"
                 >
                   <span className="relative z-10 flex items-center gap-3">Start Investing <ArrowRight className="w-4 h-4" /></span>
                   <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
@@ -64,7 +64,7 @@ export const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-white text-ink border border-slate-200 px-10 py-5 rounded-full font-700 text-sm uppercase tracking-widest hover:bg-slate-50 transition-all shadow-sm"
+                className="bg-white text-ink border border-slate-200 px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-slate-50 transition-all shadow-sm"
               >
                 Our Story
               </motion.button>
@@ -84,8 +84,8 @@ export const Hero = () => {
                 ))}
               </div>
               <div>
-                <p className="text-sm text-ink font-700">10,000+ Partners</p>
-                <p className="text-xs text-slate-muted font-500 uppercase tracking-wider">Growing across India</p>
+                <p className="text-sm text-ink font-bold">10,000+ Partners</p>
+                <p className="text-xs text-slate-muted font-medium uppercase tracking-wider">Growing across India</p>
               </div>
             </div>
           </motion.div>
@@ -113,9 +113,9 @@ export const Hero = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -top-12 -right-8 glass-card px-8 py-6 rounded-[2rem] z-20 hidden md:block"
             >
-              <p className="text-[10px] font-800 text-slate-muted uppercase tracking-[0.2em] mb-1">Market Cap</p>
-              <p className="text-3xl font-800 text-ink tracking-tighter">₹2.4T</p>
-              <div className="mt-2 flex items-center gap-2 text-emerald-500 text-xs font-700">
+              <p className="text-[10px] font-extrabold text-slate-muted uppercase tracking-[0.2em] mb-1">Market Cap</p>
+              <p className="text-3xl font-extrabold text-ink tracking-tighter">₹2.4T</p>
+              <div className="mt-2 flex items-center gap-2 text-emerald-500 text-xs font-bold">
                 <ArrowRight className="-rotate-45" size={14} />
                 <span>+18.4%</span>
               </div>
@@ -131,8 +131,8 @@ export const Hero = () => {
                   <Play size={20} fill="currentColor" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-800 text-slate-muted uppercase tracking-[0.2em]">Live Price</p>
-                  <p className="text-2xl font-800 text-ink tracking-tighter">₹6,240.50</p>
+                  <p className="text-[10px] font-extrabold text-slate-muted uppercase tracking-[0.2em]">Live Price</p>
+                  <p className="text-2xl font-extrabold text-ink tracking-tighter">₹6,240.50</p>
                 </div>
               </div>
             </motion.div>

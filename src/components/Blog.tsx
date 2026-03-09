@@ -44,21 +44,21 @@ export const Blog = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-primary font-800 uppercase tracking-[0.3em] text-[10px] mb-4"
+              className="text-primary font-extrabold uppercase tracking-[0.3em] text-[10px] mb-4"
             >
               Market Insights
             </motion.div>
-            <h2 className="text-5xl lg:text-6xl font-800 font-display text-ink mb-6 tracking-tighter">
+            <h2 className="text-5xl lg:text-6xl font-extrabold font-display text-ink mb-6 tracking-tighter">
               Latest <span className="text-gradient">Perspectives</span>
             </h2>
-            <p className="text-xl text-slate-muted leading-relaxed font-500">
+            <p className="text-xl text-slate-muted leading-relaxed font-medium">
               Expert analysis and market updates to help you navigate the world of digital assets.
             </p>
           </div>
           <Link to="/blog">
             <motion.button
               whileHover={{ x: 5 }}
-              className="text-ink font-800 text-sm uppercase tracking-widest flex items-center gap-3 group"
+              className="text-ink font-extrabold text-sm uppercase tracking-widest flex items-center gap-3 group"
             >
               Read More <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-ink group-hover:text-white transition-all"><ArrowRight size={18} /></div>
             </motion.button>

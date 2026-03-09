@@ -72,13 +72,13 @@ export const TrustMetrics = () => {
                     className: "transition-colors duration-500 group-hover:text-white" 
                   })}
                 </div>
-                <h3 className="text-5xl font-800 font-display text-ink mb-3 tracking-tighter">
+                <h3 className="text-5xl font-extrabold font-display text-ink mb-3 tracking-tighter">
                   {index === 0 && '₹'}
                   <CountUp end={metric.value} />
                   {metric.suffix}
                 </h3>
-                <p className="text-xs font-800 text-primary uppercase tracking-[0.2em] mb-4">{metric.label}</p>
-                <p className="text-base text-slate-muted leading-relaxed max-w-[250px] font-500">{metric.description}</p>
+                <p className="text-xs font-extrabold text-primary uppercase tracking-[0.2em] mb-4">{metric.label}</p>
+                <p className="text-base text-slate-muted leading-relaxed max-w-[250px] font-medium">{metric.description}</p>
               </div>
               {index < metrics.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-6 w-px h-24 bg-slate-100 -translate-y-1/2" />
