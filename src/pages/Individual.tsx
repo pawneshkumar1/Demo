@@ -8,7 +8,7 @@ export const IndividualPartnerRegistration = () => {
   const prevStep = () => setStep(prev => prev - 1);
 
   return (
-    <div className="bg-[#f7f6f8] dark:bg-[#19141e] text-slate-900 dark:text-slate-100 font-sans min-h-screen flex flex-col pt-16">
+    <div className="bg-[#f7f6f8] text-slate-900 font-sans min-h-screen flex flex-col pt-16">
       <main className="max-w-7xl mx-auto flex flex-col lg:flex-row min-h-[calc(100vh-64px)] w-full">
         {/* Left Column: Illustration */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-center items-center p-12 bg-[#5b2c90]/5">
@@ -21,8 +21,8 @@ export const IndividualPartnerRegistration = () => {
               />
             </div>
             <div className="space-y-4">
-              <h1 className="text-3xl font-bold text-slate-900 dark:text-white">Empower Your Financial Future</h1>
-              <p className="text-slate-600 dark:text-slate-400">Join thousands of partners making digital gold accessible to everyone. Start your journey with Batuk today.</p>
+              <h1 className="text-3xl font-bold text-slate-900">Empower Your Financial Future</h1>
+              <p className="text-slate-600">Join thousands of partners making digital gold accessible to everyone. Start your journey with Batuk today.</p>
             </div>
             <div className="flex gap-4 justify-center">
               <div className={`w-2 h-2 rounded-full ${step === 1 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/30'}`}></div>
@@ -33,7 +33,7 @@ export const IndividualPartnerRegistration = () => {
         </div>
 
         {/* Right Column: Form */}
-        <div className="flex-1 flex flex-col p-6 md:p-12 lg:p-20 bg-white dark:bg-[#19141e]">
+        <div className="flex-1 flex flex-col p-6 md:p-12 lg:p-20 bg-white">
           <div className="max-w-xl mx-auto w-full">
             <div className="mb-12">
               <div className="flex justify-between items-center mb-4">
@@ -41,10 +41,10 @@ export const IndividualPartnerRegistration = () => {
                 <span className="text-xs font-bold text-slate-500">{step * 25}% Complete</span>
               </div>
               <div className="flex gap-2">
-                <div className={`h-1.5 flex-1 rounded-full ${step >= 1 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10 dark:bg-slate-800'}`}></div>
-                <div className={`h-1.5 flex-1 rounded-full ${step >= 2 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10 dark:bg-slate-800'}`}></div>
-                <div className={`h-1.5 flex-1 rounded-full ${step >= 3 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10 dark:bg-slate-800'}`}></div>
-                <div className={`h-1.5 flex-1 rounded-full ${step >= 4 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10 dark:bg-slate-800'}`}></div>
+                <div className={`h-1.5 flex-1 rounded-full ${step >= 1 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10'}`}></div>
+                <div className={`h-1.5 flex-1 rounded-full ${step >= 2 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10'}`}></div>
+                <div className={`h-1.5 flex-1 rounded-full ${step >= 3 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10'}`}></div>
+                <div className={`h-1.5 flex-1 rounded-full ${step >= 4 ? 'bg-[#5b2c90]' : 'bg-[#5b2c90]/10'}`}></div>
               </div>
               <div className="mt-8 flex justify-between text-[10px] md:text-xs font-medium text-slate-400">
                 <span className={step >= 1 ? 'text-[#5b2c90]' : ''}>Personal Info</span>
@@ -57,18 +57,18 @@ export const IndividualPartnerRegistration = () => {
             {step === 1 && (
               <>
                 <div className="mb-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">Register as Individual Partner</h2>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm">Please provide your legal details as per your ID documents.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Register as Individual Partner</h2>
+                  <p className="text-slate-500 text-sm">Please provide your legal details as per your ID documents.</p>
                 </div>
 
                 <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); nextStep(); }}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Full Name</label>
+                      <label className="text-sm font-semibold text-slate-700">Full Name</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">person</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="John Doe" 
                           type="text"
                           required
@@ -76,11 +76,11 @@ export const IndividualPartnerRegistration = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Email Address</label>
+                      <label className="text-sm font-semibold text-slate-700">Email Address</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="john@example.com" 
                           type="email"
                           required
@@ -88,22 +88,22 @@ export const IndividualPartnerRegistration = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Date of Birth</label>
+                      <label className="text-sm font-semibold text-slate-700">Date of Birth</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">calendar_today</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all text-slate-700 dark:text-slate-300" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all text-slate-700" 
                           type="date"
                           required
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Phone Number</label>
+                      <label className="text-sm font-semibold text-slate-700">Phone Number</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">call</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="+1 (555) 000-0000" 
                           type="tel"
                           required
@@ -111,11 +111,11 @@ export const IndividualPartnerRegistration = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Password</label>
+                      <label className="text-sm font-semibold text-slate-700">Password</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
                         <input 
-                          className="w-full pl-10 pr-12 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="••••••••" 
                           type="password"
                           required
@@ -126,11 +126,11 @@ export const IndividualPartnerRegistration = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Confirm Password</label>
+                      <label className="text-sm font-semibold text-slate-700">Confirm Password</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock_reset</span>
                         <input 
-                          className="w-full pl-10 pr-12 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="••••••••" 
                           type="password"
                           required
@@ -154,18 +154,18 @@ export const IndividualPartnerRegistration = () => {
             {step === 2 && (
               <>
                 <div className="mb-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">Address Details</h2>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm">Please provide your Address information to proceed.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Address Details</h2>
+                  <p className="text-slate-500 text-sm">Please provide your Address information to proceed.</p>
                 </div>
 
                 <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); nextStep(); }}>
                   <div className="space-y-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Address</label>
+                      <label className="text-sm font-semibold text-slate-700">Address</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-4 text-slate-400 text-xl">home</span>
                         <textarea 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400 min-h-[100px]" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400 min-h-[100px]" 
                           placeholder="Enter Your Address" 
                           required
                         />
@@ -174,11 +174,11 @@ export const IndividualPartnerRegistration = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">State</label>
+                        <label className="text-sm font-semibold text-slate-700">State</label>
                         <div className="relative">
                           <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">map</span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                             placeholder="State" 
                             type="text"
                             required
@@ -186,11 +186,11 @@ export const IndividualPartnerRegistration = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">City</label>
+                        <label className="text-sm font-semibold text-slate-700">City</label>
                         <div className="relative">
                           <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">location_city</span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                             placeholder="City" 
                             type="text"
                             required
@@ -198,11 +198,11 @@ export const IndividualPartnerRegistration = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Pincode</label>
+                        <label className="text-sm font-semibold text-slate-700">Pincode</label>
                         <div className="relative">
                           <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">pin_drop</span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                             placeholder="6-digit Pincode" 
                             type="text"
                             maxLength={6}
@@ -211,22 +211,22 @@ export const IndividualPartnerRegistration = () => {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Aadhar No. (Optional)</label>
+                        <label className="text-sm font-semibold text-slate-700">Aadhar No. (Optional)</label>
                         <div className="relative">
                           <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">badge</span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                             placeholder="Enter Aadhar no" 
                             type="text"
                           />
                         </div>
                       </div>
                       <div className="space-y-2 md:col-span-2">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">PAN no.</label>
+                        <label className="text-sm font-semibold text-slate-700">PAN no.</label>
                         <div className="relative">
                           <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">credit_card</span>
                           <input 
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400 uppercase" 
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400 uppercase" 
                             placeholder="Enter PAN (XXXXX1234X)" 
                             type="text"
                             required
@@ -257,51 +257,51 @@ export const IndividualPartnerRegistration = () => {
             {step === 3 && (
               <>
                 <div className="mb-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">Bank Details</h2>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm">Please provide your bank information to proceed.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Bank Details</h2>
+                  <p className="text-slate-500 text-sm">Please provide your bank information to proceed.</p>
                 </div>
 
                 <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); nextStep(); }}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2 md:col-span-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Account Holder's Name (Optional)</label>
+                      <label className="text-sm font-semibold text-slate-700">Account Holder's Name (Optional)</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">account_circle</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="Enter Account Holder's Name" 
                           type="text"
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Account No. (Optional)</label>
+                      <label className="text-sm font-semibold text-slate-700">Account No. (Optional)</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">account_balance_wallet</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="Enter Account No." 
                           type="text"
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Confirm Account No. (Optional)</label>
+                      <label className="text-sm font-semibold text-slate-700">Confirm Account No. (Optional)</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">account_balance_wallet</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400" 
                           placeholder="Confirm Account No." 
                           type="text"
                         />
                       </div>
                     </div>
                     <div className="space-y-2 md:col-span-2">
-                      <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">IFSC Code (Optional)</label>
+                      <label className="text-sm font-semibold text-slate-700">IFSC Code (Optional)</label>
                       <div className="relative">
                         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">account_balance</span>
                         <input 
-                          className="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400 uppercase" 
+                          className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all placeholder:text-slate-400 uppercase" 
                           placeholder="Enter IFSC Code" 
                           type="text"
                         />
@@ -318,7 +318,7 @@ export const IndividualPartnerRegistration = () => {
                         required
                       />
                     </div>
-                    <label htmlFor="terms" className="text-sm text-slate-500 dark:text-slate-400">
+                    <label htmlFor="terms" className="text-sm text-slate-500">
                       Please accept our <Link to="#" className="text-[#5b2c90] font-bold hover:underline">terms & conditions</Link>
                     </label>
                   </div>
@@ -344,8 +344,8 @@ export const IndividualPartnerRegistration = () => {
             {step === 4 && (
               <>
                 <div className="mb-10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">OTP Verification</h2>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm">A verification code has been sent to your phone number and email.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">OTP Verification</h2>
+                  <p className="text-slate-500 text-sm">A verification code has been sent to your phone number and email.</p>
                 </div>
 
                 <form className="space-y-8" onSubmit={(e) => { e.preventDefault(); alert('Registration Successful!'); }}>
@@ -353,7 +353,7 @@ export const IndividualPartnerRegistration = () => {
                     {/* Email Verification */}
                     <div className="space-y-3">
                       <div className="flex justify-between items-end">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Email Verification</label>
+                        <label className="text-sm font-semibold text-slate-700">Email Verification</label>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Code sent to pk001@gmail.com</span>
                       </div>
                       <div className="grid grid-cols-6 gap-2">
@@ -362,7 +362,7 @@ export const IndividualPartnerRegistration = () => {
                             key={i}
                             type="text"
                             maxLength={1}
-                            className="w-full aspect-square text-center text-xl font-bold bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all"
+                            className="w-full aspect-square text-center text-xl font-bold bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all"
                             required
                           />
                         ))}
@@ -372,7 +372,7 @@ export const IndividualPartnerRegistration = () => {
                     {/* Mobile Verification */}
                     <div className="space-y-3">
                       <div className="flex justify-between items-end">
-                        <label className="text-sm font-semibold text-slate-700 dark:text-slate-300">Mobile Verification</label>
+                        <label className="text-sm font-semibold text-slate-700">Mobile Verification</label>
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Code sent to 4567890987</span>
                       </div>
                       <div className="grid grid-cols-6 gap-2">
@@ -381,7 +381,7 @@ export const IndividualPartnerRegistration = () => {
                             key={i}
                             type="text"
                             maxLength={1}
-                            className="w-full aspect-square text-center text-xl font-bold bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all"
+                            className="w-full aspect-square text-center text-xl font-bold bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-[#5b2c90] focus:border-transparent outline-none transition-all"
                             required
                           />
                         ))}
@@ -413,7 +413,7 @@ export const IndividualPartnerRegistration = () => {
             )}
 
             <div className="mt-8 text-center">
-              <p className="text-slate-500 dark:text-slate-400 text-sm">
+              <p className="text-slate-500 text-sm">
                 Already have an account? 
                 <Link className="text-[#5b2c90] font-bold hover:underline ml-1" to="/login">Login here</Link>
               </p>

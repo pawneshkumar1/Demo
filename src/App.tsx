@@ -7,7 +7,7 @@ import { BlogPage } from './pages/BlogPage';
 import { ViewBlog } from './pages/ViewBlog';
 import { Login } from './pages/Login';
 import { Registration } from './pages/Registration';
-import { IndividualPartnerRegistration } from './pages/IndividualPartnerRegistration';
+import { Individual } from './pages/Individual';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 const AppContent = () => {
@@ -37,7 +37,7 @@ const AppContent = () => {
         <Route path="/blog/view" element={<ViewBlog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Registration />} />
-        <Route path="/register/individual" element={<IndividualPartnerRegistration />} />
+        <Route path="/register/individual" element={<Individual />} />
       </Routes>
 
       <Footer />
