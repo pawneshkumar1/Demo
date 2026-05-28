@@ -1,62 +1,54 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { ArrowRight, ShieldCheck, TrendingUp, Gem } from 'lucide-react';
+import React from "react";
+import { motion } from "motion/react";
+import { SectionHeader } from "./SectionHeader";
+import { Button } from "./Button";
+import goldIcon from "../assets/icons/Offerings/GoldIcon.avif";
+import goldSIP from "../assets/icons/Offerings/GoldSIP.avif";
+import spotGold from "../assets/icons/Offerings/spotGold.avif";
 
 export const Offerings = () => {
   const products = [
     {
-      title: 'Digital Gold',
-      tag: 'Secure',
-      image: 'https://images.unsplash.com/photo-1718752773274-4baba3906300?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Buy 24K 99.9% pure gold at live market rates starting from ₹1.',
-      icon: <ShieldCheck size={20} />
+      title: "Digital Gold",
+      tag: "Secure",
+      image: goldIcon,
+      description: [
+        "Buy and Sell Gold & Silver digitally starting from Rs. 100.",
+        "Secure, insured storage accessible via our intuitive app.",
+      ],
     },
     {
-      title: 'Gold & Silver SIP',
-      tag: 'Popular',
-      image: 'https://images.unsplash.com/photo-1624365169873-d42588f4e866?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Automate your wealth creation with daily, weekly, or monthly SIPs.',
-      icon: <TrendingUp size={20} />
+      title: "Gold & Silver SIP",
+      tag: "Popular",
+      image: goldSIP,
+      description: [
+        "Regular contributions to build your gold and silver savings.",
+        "Benefit from cost averaging and align with long-term financial goals.",
+      ],
     },
     {
-      title: 'Jewellery',
-      tag: 'Premium',
-      image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Exquisite physical collections with guaranteed buy-back and purity.',
-      icon: <Gem size={20} />
-    }
+      title: "Jewellery",
+      tag: "Premium",
+      image: spotGold,
+      description: [
+        "High-quality certified gold coins, bars, and stunning jewellery.",
+        "Delivered securely and insured, cheaper than market prices.",
+      ],
+    },
   ];
 
   return (
-    <section className="py-24 bg-bg-light">
+    <section className="py-12 bg-bg-light">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-xl">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl lg:text-5xl font-800 font-display text-slate-900 mb-4"
-            >
-              Batuk's Offerings
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-lg text-slate-600"
-            >
-              Explore our curated selection of gold and silver investment products designed for maximum security.
-            </motion.p>
-          </div>
-          <motion.button
-            whileHover={{ x: 5 }}
-            className="text-primary font-700 flex items-center gap-2 hover:underline"
-          >
-            View All Products <ArrowRight size={18} />
-          </motion.button>
-        </div>
+        <SectionHeader
+          title={
+            <>
+              Batuk's <span className="text-primary">Offerings</span>
+            </>
+          }
+          subtitle="Explore our curated selection of gold and silver products designed for maximum security."
+          align="center"
+        />
 
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product, index) => (
@@ -67,37 +59,33 @@ export const Offerings = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ y: -15 }}
-              className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
+              className="group bg-white rounded-[1.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
             >
-              <div className="h-64 overflow-hidden relative">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-800 text-primary uppercase tracking-widest">
-                  {product.tag}
-                </div>
-              </div>
-              <div className="p-8">
+              <div className="p-5">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-primary/5 text-primary rounded-xl flex items-center justify-center">
-                    {product.icon}
+                  <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center p-2 group-hover:scale-110 transition-transform">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      loading="lazy"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <h3 className="text-2xl font-800 font-display text-slate-900">{product.title}</h3>
+                  <h3 className="text-2xl font-800 font-display text-slate-900">
+                    {product.title}
+                  </h3>
                 </div>
-                <p className="text-slate-500 mb-8 leading-relaxed">
-                  {product.description}
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full py-3 md:py-4 rounded-2xl bg-primary text-white font-700 text-sm md:text-base shadow-md shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 relative overflow-hidden group"
-                >
-                  <span className="relative z-10">Register Now</span>
-                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:animate-shimmer" />
-                </motion.button>
+                <div className="text-slate-600 mb-8 leading-relaxed space-y-2">
+                  {product.description.map((sentence, descIndex) => (
+                    <div key={descIndex} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-2 flex-shrink-0" />
+                      <p className="text-sm md:text-base">{sentence}</p>
+                    </div>
+                  ))}
+                </div>
+                <Button fullWidth variant="primary" size="md">
+                  Register Now
+                </Button>
               </div>
             </motion.div>
           ))}

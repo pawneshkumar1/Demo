@@ -1,0 +1,168 @@
+{
+    "error": true,
+    "messages": [
+        {
+            "field": "body.aadharNo",
+            "message": "\"body.aadharNo\" is not allowed to be empty"
+        },
+        {
+            "field": "body.accHoldername",
+            "message": "\"body.accHoldername\" is not allowed to be empty"
+        },
+        {
+            "field": "body.accNo",
+            "message": "\"body.accNo\" is not allowed to be empty"
+        },
+        {
+            "field": "body.Ifsccode",
+            "message": "\"body.Ifsccode\" is not allowed to be empty"
+        },
+        {
+            "field": "body.companyAddress",
+            "message": "\"body.companyAddress\" is not allowed to be empty"
+        },
+        {
+            "field": "body.dob",
+            "message": "\"body.dob\" must be in iso format"
+        },
+        {
+            "field": "body.Gstin",
+            "message": "\"body.Gstin\" is not allowed to be empty"
+        },
+        {
+            "field": "body.name",
+            "message": "\"body.name\" is not allowed"
+        },
+        {
+            "field": "body.email",
+            "message": "\"body.email\" is not allowed"
+        },
+        {
+            "field": "body.Entityemail",
+            "message": "\"body.Entityemail\" is not allowed"
+        },
+        {
+            "field": "body.userName",
+            "message": "\"body.userName\" is not allowed"
+        },
+        {
+            "field": "body.pincode",
+            "message": "\"body.pincode\" is not allowed"
+        }
+    ],
+    "message": "\"body.aadharNo\" is not allowed to be empty. \"body.accHoldername\" is not allowed to be empty. \"body.accNo\" is not allowed to be empty. \"body.Ifsccode\" is not allowed to be empty. \"body.companyAddress\" is not allowed to be empty. \"body.dob\" must be in iso format. \"body.Gstin\" is not allowed to be empty. \"body.name\" is not allowed. \"body.email\" is not allowed. \"body.Entityemail\" is not allowed. \"body.userName\" is not allowed. \"body.pincode\" is not allowed"
+}
+
+{
+    "error": false,
+    "message": "partner profile found",
+    "data": [
+        {
+            "_id": "6a0e9b17de8e6db6b83330db",
+            "registerType": "entity",
+            "EntityType": "private_limited",
+            "Entityname": "Company Pvt Ltd",
+            "EntityidentificationNo": "U12345MH2020PTC123456",
+            "Entityemail": "shameersingh42@gmail.com",
+            "authpersonName": "Shameer Singh",
+            "companyAddress": "Noida",
+            "Gstin": "",
+            "accHoldername": "",
+            "accNo": "",
+            "Ifsccode": "",
+            "Address": "",
+            "aadharNo": "",
+            "dob": "",
+            "panNo": "ABCDE0123Z",
+            "userName": "CPL309",
+            "city": "Noida",
+            "state": "Uttar Pradesh",
+            "mobileNo": "8342548568",
+            "pincode": "201301",
+            "is_deleted": 0,
+            "commission_per": "0.5",
+            "mmtc_commission_per": "0.3",
+            "isBlocked": false,
+            "flag": "localhost:3000",
+            "createdAt": "2026-05-21T05:41:43.236Z",
+            "updatedAt": "2026-05-21T05:41:43.236Z",
+            "__v": 0
+        }
+    ]
+}
+
+{
+    "error": false,
+    "message": "partner profile found",
+    "data": [
+        {
+            "_id": "6a0eb09d39359c7e26dddcb9",
+            "registerType": "individual",
+            "EntityType": "",
+            "EntityidentificationNo": "",
+            "companyAddress": "",
+            "accHoldername": "1234567890",
+            "accNo": "1234567890",
+            "Ifsccode": "SBIN0001234",
+            "Address": "Noida",
+            "name": "sedrftgyhuj",
+            "aadharNo": "",
+            "email": "ramankaur1232@gmail.com",
+            "dob": "09-05-2008",
+            "panNo": "ABCDE0123Z",
+            "userName": "S312",
+            "city": "Akkarampalle",
+            "state": "Andhra Pradesh",
+            "mobileNo": "7763245678",
+            "pincode": "201301",
+            "is_deleted": 0,
+            "commission_per": "0.5",
+            "mmtc_commission_per": "0.3",
+            "isBlocked": false,
+            "flag": "localhost:3000",
+            "createdAt": "2026-05-21T07:13:33.070Z",
+            "updatedAt": "2026-05-21T07:13:33.070Z",
+            "__v": 0,
+            "Gstin": ""
+        }
+    ]
+}
+
+
+{
+    "error": false,
+    "message": "partner profile found",
+    "data": [
+        {
+            "_id": "6a0e9b17de8e6db6b83330db",
+            "registerType": "entity",
+            "EntityType": "private_limited",  
+            "Entityname": "Company Pvt Ltd", // this show Company Name
+            "EntityidentificationNo": "U12345MH2020PTC123456",
+            "Entityemail": "shameersingh42@gmail.com",
+            "authpersonName": "Shameer Singh", // this show as Full Name
+            "companyAddress": "Noida", // this Show as Company Address
+            "Gstin": "", // this show as GSTIN
+            "accHoldername": "", //same as Account Holder Name
+            "accNo": "", //same as Account Number
+            "Ifsccode": "", //same as IFSC Code
+            "Address": "",
+            "aadharNo": "",
+            "dob": "",
+            "panNo": "ABCDE0123Z",
+            "userName": "CPL309",
+            "city": "Noida",
+            "state": "Uttar Pradesh",
+            "mobileNo": "8342548568",
+            "pincode": "201301",
+            "is_deleted": 0,
+            "commission_per": "0.5",
+            "mmtc_commission_per": "0.3",
+            "isBlocked": false,
+            "flag": "localhost:3000",
+            "createdAt": "2026-05-21T05:41:43.236Z",
+            "updatedAt": "2026-05-21T05:41:43.236Z",
+            "__v": 0
+        }
+    ]
+}
